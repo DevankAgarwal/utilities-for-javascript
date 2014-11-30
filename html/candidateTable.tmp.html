@@ -1,0 +1,56 @@
+<div>
+  <table border="2px">
+    <tr>
+      <td>
+        <b>Id</b>
+      </td>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Email</b>
+      </td>
+      <td>
+        <b>Address</b>
+      </td>
+      <td>
+        <b>Age</b>
+      </td>
+      <td>
+        <b>DOB</b>
+      </td>
+      <td>
+        <b>Mobile Number</b>
+      </td>
+      <td>
+        <b>City</b>
+      </td>
+    </tr>
+    <tr ng-repeat="candidate in CandidateCtrl.candidateCollection" ng-click="CandidateCtrl.getCandidateToEditMode($index)">
+      <td>
+        <span ng-bind="candidate.Id"></span>
+      </td>
+      <td>
+        <span ng-bind="candidate.CandidateName"></span>
+      </td>
+      <td>
+        <span ng-bind="candidate.CandidateEmail"></span>
+      </td>
+      <td>
+        <span ng-bind="candidate.Address"></span>
+      </td>
+      <td>
+        <span ng-bind="candidate.Age"></span>
+      </td>
+      <td>
+        <span ng-bind="candidate.DOB"></span>
+      </td>
+      <td>
+        <span ng-bind="candidate.MobileNumber"></span>
+      </td>
+      <td>
+        <span ng-bind="candidate.City.Name"></span>
+      </td>
+    </tr>
+  </table>
+</div>

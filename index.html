@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="candidates">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+  <center>
+    <br/>
+    
+    <!--<div>
+      <button ui-sref='state2'>State2</button>
+    </div> -->
+    <div ng-controller="candidateCtrl as CandidateCtrl">
+
+    <header-nav></header-nav>
+     <div data-ui-view>
+
+    </div>
+      <candidate-table></candidate-table>
+      <br/>
+      <candidate-form></candidate-form>
+    </div>
+    <script type="text/javascript" src="common/angular.js"></script>
+    <script type="text/javascript" src="common/ui-route.js"></script>
+    <script type="text/javascript" src="js/poc.module.js"></script>
+    <script type="text/javascript" src="js/candidate.module.js"></script>
+    <script type="text/javascript" src='js/routes.js'></script>
+    <script type="text/javascript" src="js/candidate.svc.js"></script>
+    <script type="text/javascript" src="js/candidate.ctrl.js"></script>
+    <script type="text/javascript" src="js/candidateTable.directive.js"></script>
+    <script type="text/javascript" src="js/candidateForm.directive.js"></script>
+    <script type="text/javascript" src="filters/candidate.filters.js"></script>
+    <script type="text/javascript" src="js/header.directive.js"></script>
+  </center>
+</body>
+
+</html>

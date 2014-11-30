@@ -1,0 +1,132 @@
+<form>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          Candidate Id:
+        </td>
+        <td>
+          <span ng-bind="CandidateCtrl.temporaryCandidate.Id">
+
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Candidate Name:
+        </td>
+        <td>
+          <input ng-model="CandidateCtrl.temporaryCandidate.CandidateName" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Candidate Email:
+        </td>
+        <td>
+          <input ng-model="CandidateCtrl.temporaryCandidate.CandidateEmail" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Address:
+        </td>
+        <td>
+          <input ng-model="CandidateCtrl.temporaryCandidate.Address" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Age:
+        </td>
+        <td>
+          <input ng-model="CandidateCtrl.temporaryCandidate.Age" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          DOB:
+        </td>
+        <td>
+          <input ng-model="CandidateCtrl.temporaryCandidate.DOB" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Mobile Number:
+        </td>
+        <td>
+          <input ng-model="CandidateCtrl.temporaryCandidate.MobileNumber" maxlength='10' type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          City:
+        </td>
+        <td>
+          <select ng-options="city.Name for city in CandidateCtrl.cityCollection" ng-model="CandidateCtrl.temporaryCandidate.City.Name">
+            <option value="">-- choose color --</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <table border="2px">
+    <tr>
+      <td>
+        CandidateName
+      </td>
+      <td>
+        CandidateEmail
+      </td>
+      <td>
+        Address
+      </td>
+
+      <td>
+        Age
+      </td>
+
+      <td>
+        DOB
+      </td>
+      <td>
+        Mobile Number
+      </td>
+      <td>
+        City
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span ng-bind="CandidateCtrl.temporaryCandidate.CandidateName"></span>
+      </td>
+      <td>
+        <span ng-bind="CandidateCtrl.temporaryCandidate.CandidateEmail"></span>
+      </td>
+
+      <td>
+        <span ng-bind="CandidateCtrl.temporaryCandidate.Address"></span>
+      </td>
+
+      <td>
+        <span ng-bind="CandidateCtrl.temporaryCandidate.Age"></span>
+      </td>
+
+      <td>
+        <span ng-bind="CandidateCtrl.temporaryCandidate.DOB"></span>
+      </td>
+
+      <td>
+        <span ng-bind="CandidateCtrl.temporaryCandidate.MobileNumber|indianMobileNumber"></span>
+      </td>
+      <td>
+        <span ng-bind="CandidateCtrl.temporaryCandidate.City.Name"></span>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <br/>
+  <button type="submit" ng-click="CandidateCtrl.editcandidateInformation();" value="Save">Save</button>
+  <button type="submit" ng-click="CandidateCtrl.clearTemporaryCandidate()" value="Clear">Clear</button>
+</form>

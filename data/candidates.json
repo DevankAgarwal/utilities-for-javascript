@@ -1,0 +1,61 @@
+[{
+        "Id": "45345",
+        "CandidateName": "Saurabh",
+        "CandidateEmail": "Saurabh@gmail.com",
+        "Address": "#101 Koramangala",
+        "Age": "27",
+        "DOB": "21-10-1986",
+        "MobileNumber":"1234567890",
+        "City": {
+            "Name": "Lucknow"
+        }
+    },
+
+
+    {
+        "Id": "45346",
+        "CandidateName": "Murali",
+        "CandidateEmail": "Murali@gmail.com",
+        "Address": "#102 Marathali",
+        "Age": "34",
+        "DOB": "22-03-1979",
+        "MobileNumber":"1234567890",
+        "City": {
+            "Name": "Mumbai"
+        }
+    }, {
+        "Id": "45347",
+        "CandidateName": "Abhishek",
+        "CandidateEmail": "Abhishek@gmail.com",
+        "Address": "#207 Indra Nagar",
+        "Age": "26",
+        "DOB": "22-07-1987",
+        "MobileNumber":"1234567890",
+        "City": {
+            "Name": "Pune"
+        }
+    }, {
+        "Id": "45348",
+        "CandidateName": "Madan",
+        "CandidateEmail": "Madan@gmail.com",
+        "Address": "#909 Bandra",
+        "Age": "32",
+        "DOB": "20-10-1975",
+        "MobileNumber":"1234567890",
+        "City": {
+            "Name": "Pune"
+        }
+    }, {
+        "Id": "45349",
+        "CandidateName": "Saptarsi",
+        "CandidateEmail": "Saptarsi@gmail.com",
+        "Address": "#404 Magarpata",
+        "Age": "20",
+        "DOB": "20-10-1989",
+        "MobileNumber":"1234567890",
+        "City": {
+            "Name": "Mumbai"
+        }
+    }
+
+]

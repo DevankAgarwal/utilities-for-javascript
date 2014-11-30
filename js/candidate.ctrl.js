@@ -21,7 +21,14 @@
         vm.editcandidateInformation = editcandidateInformation;
         vm.getCandidateToEditMode = getCandidateToEditMode;
         vm.clearTemporaryCandidate = clearTemporaryCandidate;
-
+ vm.dateJson = {
+            date:'12/12/2011',
+            date2:'01/01/2010',
+            seprator:'/',
+            currentDateFormate:'DDMMYYYY',
+            requiredDateFormate:'MMDDYYYY',
+            requiredDateDifference:false,
+        }
 
         activate();
 
@@ -38,7 +45,7 @@
             // $log.log($location.host());
             // $log.log($location.port());
             // $log.log($location.path());
-
+            //CandidateServices.getDate(vm.dateJson);
         }
 
         function getAllCandidates() {
@@ -46,6 +53,17 @@
             CandidateServices.GetAllCandidates().then(function(response) {
                 vm.candidateCollection = response;
                 vm.temporaryCandidate.Id = parseInt(vm.candidateCollection[vm.candidateCollection.length - 1].Id) + 1;
+                var temp = {
+                    Id:'candidateId',
+                    CandidateName:'candidateName',
+                    CandidateEmail:'candidateEmail',
+                    Address:'candidateAddress',
+                    Age:'candidateAge',
+                    DOB:'candidateDOB',
+                    MobileNumber:'candidateMobileNumber',
+                    City:'city'
+                }
+                CandidateServices.keyChanger(temp, vm.candidateCollection);
                 //$log.log(vm.candidateCollection);
             });
 
@@ -58,6 +76,11 @@
         function getAllCitites() {
             CandidateServices.GetAllCities().then(function(response) {
                 vm.cityCollection = response;
+                var temp = {
+                    Id:'cityId',
+                    Name:'cityName'
+                }
+                CandidateServices.keyChanger(temp, vm.cityCollection);
                 //$log.log(vm.cityCollection);
             });
 
